@@ -34,7 +34,7 @@ a {
 .btn-ghost {
   color: #c09;
   border-color: #990073;
-  margin-left: .25em;
+  margin-left: 0em;
 }
 
 .btn-ghost:hover {
@@ -188,7 +188,7 @@ a {
 @media only screen and (min-width: 38em) {
 
   .banner {
-    padding-top: 2em;
+    padding-top: 0em;
   }
 
 }
@@ -197,8 +197,8 @@ a {
 
   .banner {
     padding-top: 0;
-    padding-left: 10em;
-    padding-right: 9em;
+    padding-left: 0em;
+    padding-right: 0em;
   }
 
   .icecream-wrapper {
