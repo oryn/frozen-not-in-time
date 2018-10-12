@@ -1,211 +1,163 @@
 html {
   font-family: "Fredoka One", sans-serif;
-}
-
-.banner {
-  background: repeating-linear-gradient(-35deg, #d4fdff, #d4fdff 10px, #c9fcff 10px, #c9fcff 20px);
-  padding-bottom: 4.5em;
-  overflow: hidden;
-}
-
-body {
-  color: #c09;
-  border-top: .5em #b3fbff solid;
-  border-bottom: .5em #b3fbff solid;
+  background: repeating-linear-gradient(to top left, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  border-top: 10px #b3fbff solid;
 }
 
 h1 {
   color: #990073;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  transform: rotate(-10deg);
+  transform: rotate(-10.5deg);
+  text-shadow: 1px 1px rgba(0, 0, 0, .2);
+  left: 50px;
+  top: 70px;
 }
 
 p {
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  margin-left: .25em;
-  transform: rotate(-6deg);
+  color: #c09;
   max-width: 19em;
+  transform: rotate(-5.5deg);
+  text-shadow: 1px 1px rgba(0, 0, 0, .2);
+  margin-top: 3.5em;
 }
 
 a {
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+  color: #c09;
+  text-decoration: none;
+  text-shadow: 1px 1px rgba(0, 0, 0, .2);
 }
 
 .btn-ghost {
-  color: #c09;
   border-color: #990073;
-  margin-left: 0;
 }
 
 .btn-ghost:hover {
-  color: #c09;
+  background-color: #d4fdff;
   border-color: #990073;
 }
 
-.text-wrapper {
-  opacity: 0;
-  animation-delay: 1000ms;
-}
-
-.icecream-wrapper {
-  position: relative;
-}
-
 .cherry {
-  top: -1200px;
-  width: 160px;
-  z-index: 10;
-  left: calc(50% + 510px);
-  position: absolute;
-  animation: cherry 700ms linear forwards;
-  animation-delay: 1000ms;
+  animation: cherry-drop .5s linear forwards;
+  animation-delay: 2s;
+  width: 180px;
+  z-index: 5;
+  left: 65px;
+  top: -200px;
 }
 
-.vanilla-fudge {
-  top: -1200px;
-  width: 175px;
-  z-index: 9;
-  left: calc(50% + 500px);
-  position: absolute;
-  animation: vanilla-fudge 600ms linear forwards;
-  animation-delay: 400ms;
+@keyframes cherry-drop {
+
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: -45px;
+  }
+
 }
 
-.chocolate-chip {
-  top: -1200px;
-  width: 175px;
-  z-index: 8;
-  left: calc(50% + 520px);
-  position: absolute;
-  animation: chocolate-chip 500ms linear forwards;
-  animation-delay: 300ms;
+.vanilla {
+  animation: vanilla-drop .5s linear forwards;
+  animation-delay: 1.5s;
+  width: 180px;
+  z-index: 4;
+  left: 60px;
+  top: -200px;
 }
 
-.mint-chip {
-  top: -1200px;
-  width: 175px;
-  z-index: 7;
-  left: calc(50% + 510px);
-  position: absolute;
-  animation: mint-chip 400ms linear forwards;
-  animation-delay: 200ms;
+@keyframes vanilla-drop {
+
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: 35px;
+  }
+
+}
+
+.chocolate {
+  animation: chocolate-drop .5s linear forwards;
+  animation-delay: 1s;
+  width: 180px;
+  z-index: 3;
+  left: 75px;
+  top: -200px;
+}
+
+@keyframes chocolate-drop {
+
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: 110px;
+  }
+
+}
+
+.mint {
+  animation: mint-drop .5s linear forwards;
+  animation-delay: .5s;
+  width: 180px;
+  z-index: 1;
+  left: 70px;
+  top: -200px;
+}
+
+@keyframes mint-drop {
+
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: 190px;
+  }
+
 }
 
 .cone {
-  top: -1200px;
-  width: 175px;
-  z-index: 11;
-  left: calc(50% + 510px);
-  position: absolute;
-  animation: cone 300ms linear forwards;
-  animation-delay: 150ms;
+  animation: cone-drop .5s linear forwards;
+  width: 180px;
+  z-index: 2;
+  left: 70px;
+  top: -200px;
 }
 
-@keyframes blur {
+@keyframes cone-drop {
+
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: 300px;
+  }
+
+}
+
+.text {
+  animation: text-appear .5s linear forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+
+@keyframes text-appear {
 
   0% {
     opacity: 0;
-    filter: blur(10px);
   }
 
   50% {
-    opacity: .5;
-    filter: blur(10px);
-  }
-
-  75% {
-    opacity: .5;
-    filter: blur(10px);
+    filter: blur(5px);
   }
 
   100% {
-    opacity: 1;
-    filter: blur(10px);
-  }
-
-}
-
-@keyframes cherry {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -410px;
-  }
-
-}
-
-@keyframes vanilla-fudge {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -340px;
-  }
-
-}
-
-@keyframes chocolate-chip {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -265px;
-  }
-
-}
-
-@keyframes mint-chip {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -180px;
-  }
-
-}
-
-@keyframes cone {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -80px;
-  }
-
-}
-
-@media only screen and (min-width: 38em) {
-
-  .banner {
-    padding-top: 0;
-  }
-
-}
-
-@media only screen and (min-width: 90em) {
-
-  .banner {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .icecream-wrapper {
-    left: calc(20% - 100px);
-    top: -20px;
-    padding-top: 0;
-    padding-bottom: 0;
+    opacity: 100;
+    filter: blur(0);
   }
 
 }
