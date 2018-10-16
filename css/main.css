@@ -3,164 +3,115 @@ html {
 }
 
 .banner {
-  background-image: repeating-linear-gradient(-35deg, #b3fbff 1%, #c9fcff 2%, #d4fdff 3%);
-  border-top: 10px solid #b3fbff;
-  min-height: 485px;
+  min-height: 500px;
+  background-image: repeating-linear-gradient(-32.5deg, #c9fcff, #c9fcff 1%, #d4fdff 2%, #d4fdff 3%);
+  border-top: 7.5px solid #b3fbff;
+  border-bottom: 7.5px solid #b3fbff;
 }
 
-.btn-ghost {
-  color: #c09;
-  border-color: #c09;
-  float: left;
-  margin-left: 3rem;
+.cone-wrap {
+  min-height: 490px;
 }
 
-.btn-ghost:hover {
-  border-color: #c09;
-  color: #c09;
+.banner-content {
+  text-shadow: 1px 1px rgba(0, 0, 0, .25);
+  left: 2.5rem;
+  top: 4.5rem;
+  -webkit-animation: banner-content 1s 5s linear;
+  animation: banner-content 1s 1.5s linear forwards;
+  opacity: 0;
 }
 
-h1 {
-  color: #990073;
-  max-width: 19em;
-  transform-origin: left bottom;
-  transform: rotate(-10deg);
-  text-shadow: 1px 1px rgba(150, 150, 150, .3);
-  padding: 5rem 25rem 0 0;
-  margin: 0;
-}
+@keyframes banner-content {
 
-p {
-  color: #c09;
-  max-width: 18em;
-  transform-origin: left center;
-  transform: rotate(-5deg);
-  text-shadow: 1px 1px rgba(150, 150, 150, .3);
-}
-
-.ice-cream {
-  min-height: 485px;
-  transform: scale(.7);
-  margin: 0 0 0 26rem;
-  text-align: right;
-}
-
-.cherry {
-  bottom: 78%;
-  animation: drop-cherry 1000ms linear forwards;
-  z-index: 6;
-  position: absolute;
-}
-
-.vanilla-fudge {
-  bottom: 53%;
-  animation: drop-vanilla 600ms linear forwards;
-  z-index: 4;
-  position: absolute;
-}
-
-.chocolate-chip {
-  bottom: 50%;
-  animation: drop-chocolate 200ms linear forwards;
-  z-index: 3;
-  position: absolute;
-  margin-left: 1em;
-}
-
-.mint-chip {
-  bottom: 26%;
-  animation: drop-mint 200ms 200ms linear forwards;
-  position: absolute;
-}
-
-.cone {
-  z-index: 11;
-  bottom: -1200px;
-  animation: drop-cone 250ms linear forwards;
-  position: absolute;
-}
-
-@keyframes drop-cone {
-
-  from {
-    bottom: 120%;
-  }
-
-  to {
-    bottom: -77px;
-  }
-}
-
-@keyframes drop-mint {
-
-  from {
-    bottom: 130%;
-  }
-
-  to {
-    bottom: 70px;
-  }
-}
-
-@keyframes drop-chocolate {
-
-  from {
-    bottom: 120%;
-  }
-
-  to {
-    bottom: 190px;
-  }
-}
-
-@keyframes drop-vanilla {
-
-  from {
-    bottom: 120%;
-  }
-
-  to {
-    bottom: 292px;
-  }
-}
-
-@keyframes drop-cherry {
-
-  from {
-    bottom: 120%;
-  }
-
-  to {
-    bottom: 430px;
-  }
-}
-
-@keyframes blur {
-
-  from {
+  0% {
     opacity: 0;
-    filter: blur(20px);
+    filter: blur(7px);
   }
 
-  to {
+  100% {
     opacity: 1;
     filter: blur(0);
   }
 
 }
 
-@media only screen and (min-width: 60em) {
-
-  .ice-cream {
-    margin-left: 22rem;
-  }
-
+h1 {
+  color: #990073;
+  transform: rotate(-8deg);
+  transform-origin: left center;
 }
 
-@media only screen and (min-width: 90em) {
+p {
+  max-width: 19em;
+  color: #c09;
+  transform: rotate(-5deg);
+  transform-origin: left center;
+}
 
-  .ice-cream {
-    margin-left: 24rem;
+.btn-ghost {
+  border-color: #990073;
+  color: #c09;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(204, 0, 153, .15);
+  border-color: #990073;
+  color: #c09;
+}
+
+.ic-cone {
+  height: 175px;
+}
+
+.cone {
+  bottom: 10px;
+  left: 60px;
+  z-index: 2;
+  transform: translateY(-100rem);
+  animation: cone 1s linear forwards;
+}
+
+.mint {
+  bottom: 115px;
+  left: 60px;
+  z-index: 1;
+  transform: translateY(-100rem);
+  animation: cone 1s .5s linear forwards;
+}
+
+.choco {
+  bottom: 195px;
+  left: 65px;
+  z-index: 3;
+  transform: translateY(-100rem);
+  animation: cone 1s 1s linear forwards;
+}
+
+.vanilla {
+  bottom: 280px;
+  left: 60px;
+  z-index: 4;
+  transform: translateY(-100rem);
+  animation: cone 1s 1.5s linear forwards;
+}
+
+.cherry {
+  bottom: 360px;
+  left: 60px;
+  z-index: 5;
+  transform: translateY(-100rem);
+  animation: cone 1s 2s linear forwards;
+}
+
+@keyframes cone {
+
+  0% {
+    transform: translateY(-100rem);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 
 }
