@@ -130,6 +130,7 @@ p {
   to {
     transform: translate(40%, 170%);
   }
+
 }
 
 @keyframes text-display {
