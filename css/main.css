@@ -85,7 +85,7 @@ p {
   left: 65px;
   z-index: 3;
   transform: translateY(-100rem);
-  animation: cone 1s 1s linear forwards;
+  animation: cone .5s linear forwards;
 }
 
 .vanilla {
