@@ -3,209 +3,164 @@ html {
 }
 
 .banner {
-  background: repeating-linear-gradient(-35deg, #d4fdff, #d4fdff 10px, #c9fcff 10px, #c9fcff 20px);
-  padding-bottom: 0;
-  overflow: hidden;
-}
-
-body {
-  color: #c09;
-  border-top: .5em #b3fbff solid;
-  border-bottom: .5em #b3fbff solid;
-}
-
-h1 {
-  color: #990073;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  transform: rotate(-10deg);
-}
-
-p {
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  margin-left: 0;
-  transform: rotate(-6deg);
-  max-width: 19em;
-}
-
-a {
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+  background-image: repeating-linear-gradient(-35deg, #b3fbff 1%, #c9fcff 2%, #d4fdff 3%);
+  border-top: 10px solid #b3fbff;
+  min-height: 485px;
 }
 
 .btn-ghost {
   color: #c09;
-  border-color: #990073;
-  margin-left: 0;
+  border-color: #c09;
+  float: left;
+  margin-left: 3rem;
 }
 
 .btn-ghost:hover {
+  border-color: #c09;
   color: #c09;
-  border-color: #990073;
 }
 
-.text-wrapper {
-  opacity: 0;
-  animation-delay: 1000ms;
+h1 {
+  color: #990073;
+  max-width: 19em;
+  transform-origin: left bottom;
+  transform: rotate(-10deg);
+  text-shadow: 1px 1px rgba(150, 150, 150, .3);
+  padding: 5rem 25rem 0 0;
+  margin: 0;
 }
 
-.icecream-wrapper {
-  position: relative;
+p {
+  color: #c09;
+  max-width: 18em;
+  transform-origin: left center;
+  transform: rotate(-5deg);
+  text-shadow: 1px 1px rgba(150, 150, 150, .3);
+}
+
+.ice-cream {
+  min-height: 485px;
+  transform: scale(.7);
+  margin: 0 0 0 26rem;
+  text-align: right;
 }
 
 .cherry {
-  top: -1200px;
-  width: 160px;
-  z-index: 10;
-  left: calc(50% + 510px);
+  bottom: 78%;
+  animation: drop-cherry 1000ms linear forwards;
+  z-index: 6;
   position: absolute;
-  animation: cherry 700ms linear forwards;
-  animation-delay: 1000ms;
 }
 
 .vanilla-fudge {
-  top: -1200px;
-  width: 175px;
-  z-index: 9;
-  left: calc(50% + 500px);
+  bottom: 53%;
+  animation: drop-vanilla 600ms linear forwards;
+  z-index: 4;
   position: absolute;
-  animation: vanilla-fudge 600ms linear forwards;
-  animation-delay: 400ms;
 }
 
 .chocolate-chip {
-  top: -1200px;
-  width: 175px;
-  z-index: 8;
-  left: calc(50% + 520px);
+  bottom: 50%;
+  animation: drop-chocolate 200ms linear forwards;
+  z-index: 3;
   position: absolute;
-  animation: chocolate-chip 500ms linear forwards;
-  animation-delay: 300ms;
+  margin-left: 1em;
 }
 
 .mint-chip {
-  top: -1200px;
-  width: 175px;
-  z-index: 7;
-  left: calc(50% + 510px);
+  bottom: 26%;
+  animation: drop-mint 200ms 200ms linear forwards;
   position: absolute;
-  animation: mint-chip 400ms linear forwards;
-  animation-delay: 200ms;
 }
 
 .cone {
-  top: -1200px;
-  width: 175px;
   z-index: 11;
-  left: calc(50% + 510px);
+  bottom: -1200px;
+  animation: drop-cone 250ms linear forwards;
   position: absolute;
-  animation: cone 300ms linear forwards;
-  animation-delay: 150ms;
+}
+
+@keyframes drop-cone {
+
+  from {
+    bottom: 120%;
+  }
+
+  to {
+    bottom: -77px;
+  }
+}
+
+@keyframes drop-mint {
+
+  from {
+    bottom: 130%;
+  }
+
+  to {
+    bottom: 70px;
+  }
+}
+
+@keyframes drop-chocolate {
+
+  from {
+    bottom: 120%;
+  }
+
+  to {
+    bottom: 190px;
+  }
+}
+
+@keyframes drop-vanilla {
+
+  from {
+    bottom: 120%;
+  }
+
+  to {
+    bottom: 292px;
+  }
+}
+
+@keyframes drop-cherry {
+
+  from {
+    bottom: 120%;
+  }
+
+  to {
+    bottom: 430px;
+  }
 }
 
 @keyframes blur {
 
-  0% {
+  from {
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(20px);
   }
 
-  50% {
-    opacity: .5;
-    filter: blur(10px);
-  }
-
-  75% {
-    opacity: .5;
-    filter: blur(10px);
-  }
-
-  100% {
+  to {
     opacity: 1;
-    filter: blur(10px);
+    filter: blur(0);
   }
 
 }
 
-@keyframes cherry {
+@media only screen and (min-width: 60em) {
 
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -410px;
-  }
-
-}
-
-@keyframes vanilla-fudge {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -340px;
-  }
-
-}
-
-@keyframes chocolate-chip {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -265px;
-  }
-
-}
-
-@keyframes mint-chip {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -180px;
-  }
-
-}
-
-@keyframes cone {
-
-  0% {
-    top: -1200px;
-  }
-
-  100% {
-    top: -80px;
-  }
-
-}
-
-@media only screen and (min-width: 38em) {
-
-  .banner {
-    padding-top: 0;
+  .ice-cream {
+    margin-left: 22rem;
   }
 
 }
 
 @media only screen and (min-width: 90em) {
 
-  .banner {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .icecream-wrapper {
-    left: calc(20% - 100px);
-    top: -20px;
-    padding-top: 0;
-    padding-bottom: 0;
+  .ice-cream {
+    margin-left: 24rem;
   }
 
 }
