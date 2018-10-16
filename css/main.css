@@ -3,37 +3,9 @@ html {
 }
 
 .banner {
+  background-image: repeating-linear-gradient(145deg, #d4fdff 10px, #d4fdff 20px, #c9fcff 20px, #c9fcff 30px);
   min-height: 500px;
-  background-image: repeating-linear-gradient(-32.5deg, #c9fcff, #c9fcff 1%, #d4fdff 2%, #d4fdff 3%);
-  border-top: 7.5px solid #b3fbff;
-  border-bottom: 7.5px solid #b3fbff;
-}
-
-.cone-wrap {
-  min-height: 490px;
-}
-
-.banner-content {
-  text-shadow: 1px 1px rgba(0, 0, 0, .25);
-  left: 2.5rem;
-  top: 4.5rem;
-  -webkit-animation: banner-content 1s 5s linear;
-  animation: banner-content 1s 1.5s linear forwards;
-  opacity: 0;
-}
-
-@keyframes banner-content {
-
-  0% {
-    opacity: 0;
-    filter: blur(7px);
-  }
-
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-
+  border-top: #b3fbff 10px solid;
 }
 
 h1 {
@@ -43,75 +15,133 @@ h1 {
 }
 
 p {
-  max-width: 19em;
   color: #c09;
   transform: rotate(-5deg);
+  max-width: 19em;
   transform-origin: left center;
 }
 
 .btn-ghost {
-  border-color: #990073;
   color: #c09;
+  border-color: #990073;
 }
 
 .btn-ghost:hover {
-  background-color: rgba(204, 0, 153, .15);
-  border-color: #990073;
+  background-color: rgba(153, 0, 115, .5);
   color: #c09;
+  border-color: #990073;
 }
 
-.ic-cone {
-  height: 175px;
+.text {
+  transform: translateY(40%);
+  bottom: -50%;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  opacity: 0;
+  animation: text-display 500ms linear forwards;
 }
 
 .cone {
-  bottom: 10px;
-  left: 60px;
-  z-index: 2;
-  transform: translateY(-100rem);
-  animation: cone 1s linear forwards;
+  transform: translate(40%, 170%);
+  width: 180px;
+  animation: cone-drop 250ms 200ms linear forwards;
 }
 
 .mint {
-  bottom: 115px;
-  left: 60px;
-  z-index: 1;
-  transform: translateY(-100rem);
-  animation: cone 1s .5s linear forwards;
+  transform: translate(40%, 111%);
+  width: 180px;
+  animation: mint-drop 250ms 300ms linear forwards;
 }
 
-.choco {
-  bottom: 195px;
-  left: 65px;
-  z-index: 3;
-  transform: translateY(-100rem);
-  animation: cone .5s linear forwards;
+.chocolate {
+  transform: translate(45%, -200%);
+  width: 180px;
+  z-index: 2;
+  animation: chocolate-drop 250ms 400ms linear forwards;
 }
 
 .vanilla {
-  bottom: 280px;
-  left: 60px;
-  z-index: 4;
-  transform: translateY(-100rem);
-  animation: cone 1s 1.5s linear forwards;
+  transform: translate(40%, -100%);
+  width: 180px;
+  z-index: 3;
+  animation: vanilla-drop 250ms 600ms linear forwards;
 }
 
 .cherry {
-  bottom: 360px;
-  left: 60px;
-  z-index: 5;
-  transform: translateY(-100rem);
-  animation: cone 1s 2s linear forwards;
+  transform: translate(40%, -100%);
+  width: 180px;
+  z-index: 1000;
+  animation: cherry-drop 250ms 800ms linear forwards;
 }
 
-@keyframes cone {
+@keyframes mint-drop {
 
   0% {
-    transform: translateY(-100rem);
+    transform: translate(40%, -200%);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translate(40%, 111%);
+  }
+
+}
+
+@keyframes chocolate-drop {
+
+  0% {
+    transform: translate(40%, -200%);
+  }
+
+  100% {
+    transform: translate(45%, 65%);
+  }
+
+}
+
+@keyframes cherry-drop {
+
+  0% {
+    transform: translate(40%, -100%);
+  }
+
+  100% {
+    transform: translate(40%, -20%);
+  }
+
+}
+
+@keyframes vanilla-drop {
+
+  0% {
+    transform: translate(40%, -100%);
+  }
+
+  100% {
+    transform: translate(40%, 23%);
+  }
+
+}
+
+@keyframes cone-drop {
+
+  from {
+    transform: translate(40%, -100%);
+  }
+
+  to {
+    transform: translate(40%, 170%);
+  }
+}
+
+@keyframes text-display {
+
+  from {
+    opacity: 0;
+    filter: blur(30px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
   }
 
 }
