@@ -4,7 +4,7 @@ html {
 
 .banner {
   background: repeating-linear-gradient(-35deg, #d4fdff, #d4fdff 10px, #c9fcff 10px, #c9fcff 20px);
-  padding-bottom: 4.5em;
+  padding-bottom: 0;
   overflow: hidden;
 }
 
@@ -22,7 +22,7 @@ h1 {
 
 p {
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  margin-left: .25em;
+  margin-left: 0;
   transform: rotate(-6deg);
   max-width: 19em;
 }
@@ -34,7 +34,7 @@ a {
 .btn-ghost {
   color: #c09;
   border-color: #990073;
-  margin-left: .25em;
+  margin-left: 0;
 }
 
 .btn-ghost:hover {
@@ -188,7 +188,7 @@ a {
 @media only screen and (min-width: 38em) {
 
   .banner {
-    padding-top: 2em;
+    padding-top: 0;
   }
 
 }
